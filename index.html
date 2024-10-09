@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çalışan Yönetim Sistemi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+        }
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Çalışan Yönetim Sistemi</h1>
+    
+    <form id="employeeForm">
+        <label for="name">İsim:</label>
+        <input type="text" id="name" required>
+
+        <label for="age">Yaş:</label>
+        <input type="number" id="age" required>
+
+        <label for="department">Departman:</label>
+        <input type="text" id="department" required>
+
+        <label for="salary">Maaş:</label>
+        <input type="number" id="salary" required>
+
+        <button type="button" onclick="addEmployee()">Çalışan Ekle</button>
+        <button type="button" onclick="updateEmployee()">Çalışan Güncelle</button>
+        <button type="button" onclick="deleteEmployee()">Çalışan Sil</button>
+        <button type="button" onclick="listEmployees()">Tüm Çalışanları Listele</button>
+        <button type="button" onclick="listByDepartment()">Departmana Göre Listele</button>
+        <button type="button" onclick="listBySalaryOrder()">Maaşa Göre Listele</button>
+        <button type="button" onclick="listBelowSalary()">Belirli Maaşın Altındaki Çalışanlar</button>
+        <button type="button" onclick="findHighestSalary()">En Yüksek Maaşlı Çalışan</button>
+        <button type="button" onclick="calculateTotalSalary()">Toplam Maaş Hesapla</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script src="dizi ve koşullar js.js"></script>
+</body>
+</html>
